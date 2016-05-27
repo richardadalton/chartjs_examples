@@ -6,7 +6,7 @@ var lineOptions = {
             }
         }]
     },
-    stacked: true
+    title: {text: 'Line Chart'}
 };
 
 var singleLineData = {
@@ -65,4 +65,3 @@ var multipleLineData = {
         "Blue"
     ]
 };
-

@@ -5,7 +5,8 @@ var pieOptions = {
                 beginAtZero: true
             }
         }]
-    }
+    },
+    title: {text: 'Pie Chart'}
 };
 
 var singlePieData = {

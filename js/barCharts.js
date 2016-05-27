@@ -6,7 +6,7 @@ var barOptions = {
             }
         }]
     },
-    title: {text: 'My Cool Chart'}
+    title: {text: 'Bar Chart'}
 
 };
 
@@ -33,6 +33,7 @@ var singleBarData = {
 
 var multipleBarData = {
     datasets: [{
+        type: 'line',
         data: [
             11,
             16,
@@ -40,7 +41,7 @@ var multipleBarData = {
             3,
             14
         ],
-        backgroundColor: "#4BC0C0",
+        backgroundColor: "rgba(200,200,200,0.5)",
         label: '2015' // for legend
     },
         {

@@ -5,7 +5,8 @@ var polarAreaOptions = {
                 beginAtZero: true
             }
         }]
-    }
+    },
+    title: {text: 'Polar Area Chart'}
 };
 
 var singlePolarAreaData = {
@@ -45,7 +46,8 @@ var multiplePolarAreaData = {
             3,
             14
         ],
-        backgroundColor: "#4BC0C0",
+        backgroundColor: "rgba(200,200,200,0.25)",
+        borderColor: "#800000",
         label: '2015' // for legend
     },
         {
@@ -56,7 +58,8 @@ var multiplePolarAreaData = {
                 13,
                 4
             ],
-            backgroundColor: "#FFCE56",
+            backgroundColor: "rgba(220,206,86,0.75)",
+            borderColor: "#008000",
             label: '2016' // for legend
         }],
     labels: [

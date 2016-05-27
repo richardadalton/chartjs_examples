@@ -5,7 +5,8 @@ var radarOptions = {
                 beginAtZero: true
             }
         }]
-    }
+    },
+    title: {text: 'Radar Chart'}
 };
 
 var singleRadarData = {

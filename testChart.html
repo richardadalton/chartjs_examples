@@ -14,6 +14,7 @@
     <script src="js/pieCharts.js"></script>
 </head>
 <body>
+
 <header>
     <div class="container">
         <h1 class="logo">Chartjs Examples</h1>
@@ -21,65 +22,62 @@
 </header>
 
 <div class="container">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="chart1" width="300" height="300"></canvas>
-            </div>
-            <div class="col-md-6">
-                <canvas id="chart2" width="300" height="300"></canvas>
-            </div>
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="chart1" width="300" height="300"></canvas>
         </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="chart3" width="300" height="300"></canvas>
-            </div>
-            <div class="col-md-6">
-                <canvas id="chart4" width="300" height="300"></canvas>
-            </div>
+        <div class="col-md-6">
+            <canvas id="chart2" width="300" height="300"></canvas>
         </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="chart5" width="300" height="300"></canvas>
-            </div>
-            <div class="col-md-6">
-                <canvas id="chart6" width="300" height="300"></canvas>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="chart7" width="300" height="300"></canvas>
-            </div>
-            <div class="col-md-6">
-                <canvas id="chart8" width="300" height="300"></canvas>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="chart9" width="300" height="300"></canvas>
-            </div>
-            <div class="col-md-6">
-                <canvas id="chart10" width="300" height="300"></canvas>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="chart11" width="300" height="300"></canvas>
-            </div>
-            <div class="col-md-6">
-                <canvas id="chart12" width="300" height="300"></canvas>
-            </div>
-        </div>
-
     </div>
 
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="chart3" width="300" height="300"></canvas>
+            <input type="button" value="Add Data" onclick="adddata()">
+        </div>
+        <div class="col-md-6">
+            <canvas id="chart4" width="300" height="300"></canvas>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="chart5" width="300" height="300"></canvas>
+        </div>
+        <div class="col-md-6">
+            <canvas id="chart6" width="300" height="300"></canvas>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="chart7" width="300" height="300"></canvas>
+        </div>
+        <div class="col-md-6">
+            <canvas id="chart8" width="300" height="300"></canvas>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="chart9" width="300" height="300"></canvas>
+        </div>
+        <div class="col-md-6">
+            <canvas id="chart10" width="300" height="300"></canvas>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="chart11" width="300" height="300"></canvas>
+        </div>
+        <div class="col-md-6">
+            <canvas id="chart12" width="300" height="300"></canvas>
+        </div>
+    </div>
 </div>
+
 
 <script>
     var ctx1 = document.getElementById("chart1");
@@ -99,7 +97,7 @@
     new Chart(ctx1, {
         type: 'bar',
         data: singleBarData,
-        options: barOptions
+        options: barOptions,
     });
 
     new Chart(ctx2, {
@@ -108,7 +106,7 @@
         options: barOptions
     });
 
-    new Chart(ctx3, {
+    var aLineChart = new Chart(ctx3, {
         type: 'line',
         data: singleLineData,
         options: lineOptions
@@ -171,6 +169,11 @@
     });
 
 
+    function adddata() {
+      aLineChart.data.datasets[0].data.push(25);
+      aLineChart.data.labels.push("Purple");
+      aLineChart.update();
+    }
 </script>
 
 </body>
