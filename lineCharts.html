@@ -40,10 +40,81 @@
     <div class="row">
         <div class="col-md-6">
             <canvas id="chart1" width="300" height="300"></canvas>
-            <input type="button" value="Add Data" onclick="adddata()">
+            <p><input type="button" value="Add Data" onclick="adddata()"></p>
+            <p> This simple Line Chart plots one dataset.
+                The dataset consists of an array of datapoints (data)
+                A colors for the columns(backgroundColor)
+                And a label for the dataset (label)</p>
+            <p>Outside of the dataset the columns labels are specified.</p>
+            <p>Click 'Add Data' to plot a new datapoint</p>
+<pre>
+{
+    datasets: [{
+        data: [
+            11,
+            16,
+            7,
+            3,
+            14
+        ],
+        backgroundColor: "rgba(220,220,220,0.5)",
+        label: 'My dataset' // for legend
+    }],
+    labels: [
+        "Red",
+        "Green",
+        "Yellow",
+        "Grey",
+        "Blue"
+    ]
+}
+</pre>
+
         </div>
         <div class="col-md-6">
             <canvas id="chart2" width="300" height="300"></canvas>
+            <p> This Line Chart plots two datasets.
+                Each dataset consists of an array of datapoints (data)
+                An array of colors for the columns(backgroundColor)
+                And a label for the dataset (label)</p>
+            <p>Outside of the dataset the columns labels are specified.</p>
+<pre>
+    {
+    datasets: [{
+        data: [
+            11,
+            16,
+            7,
+            3,
+            14
+        ],
+        backgroundColor: "rgba(220,220,220,0.5)",
+        borderColor: "rgba(220,0,0,0.5)",
+        label: '2015',
+        lineTension: 0,
+        fill: true
+    },
+        {
+            data: [
+                1,
+                6,
+                17,
+                13,
+                4
+            ],
+            backgroundColor: "rgba(255,206,56,0.5)",
+            label: '2016',
+            lineTension: 0
+        }],
+    labels: [
+        "Red",
+        "Green",
+        "Yellow",
+        "Grey",
+        "Blue"
+    ]
+}
+</pre>
         </div>
     </div>
 </div>
@@ -58,13 +129,13 @@
     var aLineChart = new Chart(ctx1, {
         type: 'line',
         data: singleLineData,
-        options: lineOptions
+        options: createOptions("Single Dataset Line Chart")
     });
 
     new Chart(ctx2, {
         type: 'line',
         data: multipleLineData,
-        options: lineOptions
+        options: createOptions('Multuple Dataset Line Chart')
     });
 
     function adddata() {

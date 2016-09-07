@@ -1,14 +1,3 @@
-var lineOptions = {
-    scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
-        }]
-    },
-    title: {text: 'Line Chart'}
-};
-
 var singleLineData = {
     datasets: [{
         data: [
@@ -18,6 +7,7 @@ var singleLineData = {
             3,
             14
         ],
+        backgroundColor: "rgba(220,220,220,0.5)",
         label: 'My dataset' // for legend
     }],
     labels: [
@@ -28,6 +18,7 @@ var singleLineData = {
         "Blue"
     ]
 };
+
 
 
 var multipleLineData = {

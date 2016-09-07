@@ -11,8 +11,8 @@
 </head>
 <body>
 
-<header>
-    <div class="container">
+<div class="container">
+    <header>
         <div class="row">
             <div class="col-md-2">
                 <img src="http://www.chartjs.org/img/chartjs-logo.svg">
@@ -32,17 +32,93 @@
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<div class="container">
     <h2>Bar Charts</h2>
     <div class="row">
         <div class="col-md-6">
             <canvas id="chart1" width="300" height="300"></canvas>
+            <p> This simple Bar Chart plots one dataset.
+                The dataset consists of an array of datapoints (data)
+                An array of colors for the columns(backgroundColor)
+                And a label for the dataset (label)</p>
+            <p>
+                Outside of the dataset the columns labels are specified.
+            </p>
+
+<pre>
+{
+    datasets: [{
+        data: [
+            11,
+            16,
+            7,
+            3,
+            14
+        ],
+        backgroundColor: [
+            "#FF6384",
+            "#4BC0C0",
+            "#FFCE56",
+            "#E7E9ED",
+            "#36A2EB"
+        ],
+        label: 'My dataset'
+    }],
+    labels: [
+        "Red",
+        "Green",
+        "Yellow",
+        "Grey",
+        "Blue"
+    ]
+};
+</pre>
+
         </div>
         <div class="col-md-6">
             <canvas id="chart2" width="300" height="300"></canvas>
+            <p> This Bar Chart plots two datasets.
+                Each dataset consists of an array of datapoints (data)
+                A background color for the columns (backgroundColor)
+                And a label for the dataset (label)</p>
+            <p>
+                Outside of the dataset the columns labels are specified.
+            </p>
+
+            <pre>
+{
+    datasets: [{
+        data: [
+            11,
+            16,
+            7,
+            3,
+            14
+        ],
+        backgroundColor: "rgba(200,200,200,0.5)",
+        label: '2015' // for legend
+    },
+        {
+            data: [
+                1,
+                6,
+                17,
+                13,
+                4
+            ],
+            backgroundColor: "#FFCE56",
+            label: '2016' // for legend
+        }],
+    labels: [
+        "Red",
+        "Green",
+        "Yellow",
+        "Grey",
+        "Blue"
+    ]
+};
+</pre>
         </div>
     </div>
 </div>
@@ -50,12 +126,20 @@
 
 <script>
     var ctx1 = document.getElementById("chart1");
+    var ctx2 = document.getElementById("chart2");
 
     new Chart(ctx1, {
         type: 'bar',
         data: singleBarData,
-        options: barOptions
+        options: createOptions('Single Dataset Bar Chart')
     });
+
+    new Chart(ctx2, {
+        type: 'bar',
+        data: multipleBarData,
+        options: createOptions('Multiple Dataset Bar Chart')
+    });
+
 </script>
 
 </body>

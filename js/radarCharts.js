@@ -1,13 +1,4 @@
-var radarOptions = {
-    scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
-        }]
-    },
-    title: {text: 'Radar Chart'}
-};
+var radarOptions = extend(genericOptions, {title: {text: 'Radar Chart'}});
 
 var singleRadarData = {
     datasets: [{

@@ -1,13 +1,4 @@
-var polarAreaOptions = {
-    scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
-        }]
-    },
-    title: {text: 'Polar Area Chart'}
-};
+var polarAreaOptions = extend(genericOptions, {title: {text: 'Polar Area Chart'}});
 
 var singlePolarAreaData = {
     datasets: [{

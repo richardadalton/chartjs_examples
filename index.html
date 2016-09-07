@@ -59,7 +59,6 @@
         </div>
         <div class="col-md-6">
             <canvas id="chart2" width="300" height="300"></canvas>
-            <input type="button" value="Add Data" onclick="adddata()">
         </div>
     </div>
 
@@ -109,13 +108,13 @@
     new Chart(ctx1, {
         type: 'bar',
         data: singleBarData,
-        options: barOptions
+        options: createOptions('Bar Chart')
     });
 
     var aLineChart = new Chart(ctx2, {
         type: 'line',
         data: singleLineData,
-        options: lineOptions
+        options: createOptions('Line Chart')
     });
 
     new Chart(ctx3, {
@@ -135,12 +134,6 @@
         data: singlePieData,
         options: pieOptions
     });
-
-    function adddata() {
-      aLineChart.data.datasets[0].data.push(25);
-      aLineChart.data.labels.push("Purple");
-      aLineChart.update();
-    }
 </script>
 
 </body>
