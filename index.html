@@ -17,24 +17,68 @@
 
 <header>
     <div class="container">
-        <h1 class="logo">Chartjs Examples</h1>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="http://www.chartjs.org/img/chartjs-logo.svg">
+            </div>
+            <div class="col-md-10">
+                <h1 class="logo">Chart.js Examples</h1>
+                <h4>Richard Dalton</h4>
+                <div class="btn-group btn-group-md" role="group" aria-label="...">
+                    <a href="index.html" class="btn btn-default" role="button">Home</a>
+                    <a href="barcharts.html" class="btn btn-default" role="button">Bar</a>
+                    <a href="lineCharts.html" class="btn btn-default" role="button">Line</a>
+                    <a href="radarCharts.html" class="btn btn-default" role="button">Radar</a>
+                    <a href="polarAreaCharts.html" class="btn btn-default" role="button">Polar</a>
+                    <a href="pieCharts.html" class="btn btn-default" role="button">Pie</a>
+                    <a href="compositeCharts.html" class="btn btn-default" role="button">Composite</a>
+                    <a href="http://www.chartjs.org" class="btn btn-default" role="button">Chart.js</a>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 
 <div class="container">
     <div class="row">
+        <h3>Bar Charts</h3>
+        <p><a href="barcharts.html" class="btn btn-default">Examples</a></p>
         <div class="col-md-6">
             <canvas id="chart1" width="300" height="300"></canvas>
         </div>
         <div class="col-md-6">
-            <canvas id="chart2" width="300" height="300"></canvas>
+            <p>A bar chart plots data as a set of bars of different lengths.</p>
         </div>
     </div>
 
     <div class="row">
+        <h3>Line Charts</h3>
+        <p><a href="lineCharts.html" class="btn btn-default">Examples</a></p>
+        <div class="col-md-6">
+            <p>A line chart plots data as a set of points connected by lines. The lines can either be straight, or curved to smooth out the changes at the data points.</p>
+        </div>
+        <div class="col-md-6">
+            <canvas id="chart2" width="300" height="300"></canvas>
+            <input type="button" value="Add Data" onclick="adddata()">
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>Radar Charts</h3>
+        <p><a href="radarCharts.html" class="btn btn-default">Examples</a></p>
         <div class="col-md-6">
             <canvas id="chart3" width="300" height="300"></canvas>
-            <input type="button" value="Add Data" onclick="adddata()">
+        </div>
+        <div class="col-md-6">
+            <p>A Radar plots data points to mark out an area of a polygon.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>Polar Area Charts</h3>
+        <p><a href="polarAreaCharts.html" class="btn btn-default">Examples</a></p>
+        <div class="col-md-6">
+            <p>A polar area chart is similar to a pie chart, however the angles of all of the slices are the same. The data is plotted as distance from the center.</p>
         </div>
         <div class="col-md-6">
             <canvas id="chart4" width="300" height="300"></canvas>
@@ -42,38 +86,13 @@
     </div>
 
     <div class="row">
+        <h3>Pie & Doughnut Charts</h3>
+        <p><a href="pieCharts.html" class="btn btn-default">Examples</a></p>
         <div class="col-md-6">
             <canvas id="chart5" width="300" height="300"></canvas>
         </div>
         <div class="col-md-6">
-            <canvas id="chart6" width="300" height="300"></canvas>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <canvas id="chart7" width="300" height="300"></canvas>
-        </div>
-        <div class="col-md-6">
-            <canvas id="chart8" width="300" height="300"></canvas>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <canvas id="chart9" width="300" height="300"></canvas>
-        </div>
-        <div class="col-md-6">
-            <canvas id="chart10" width="300" height="300"></canvas>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <canvas id="chart11" width="300" height="300"></canvas>
-        </div>
-        <div class="col-md-6">
-            <canvas id="chart12" width="300" height="300"></canvas>
+            <p>A pie chart divides up the slices of a circle proportionately based on the relative sizes of the datapoints. A Doughut chart is the same as a Pie Chart, however the inside of the pie is removed. So the Chart actually resembles a ring, or doughut.</p>
         </div>
     </div>
 </div>
@@ -85,13 +104,6 @@
     var ctx3 = document.getElementById("chart3");
     var ctx4 = document.getElementById("chart4");
     var ctx5 = document.getElementById("chart5");
-    var ctx6 = document.getElementById("chart6");
-    var ctx7 = document.getElementById("chart7");
-    var ctx8 = document.getElementById("chart8");
-    var ctx9 = document.getElementById("chart9");
-    var ctx10 = document.getElementById("chart10");
-    var ctx11 = document.getElementById("chart11");
-    var ctx12 = document.getElementById("chart12");
 
 
     new Chart(ctx1, {
@@ -100,74 +112,29 @@
         options: barOptions
     });
 
-    new Chart(ctx2, {
-        type: 'bar',
-        data: multipleBarData,
-        options: barOptions
-    });
-
-    var aLineChart = new Chart(ctx3, {
+    var aLineChart = new Chart(ctx2, {
         type: 'line',
         data: singleLineData,
         options: lineOptions
     });
 
-    new Chart(ctx4, {
-        type: 'line',
-        data: multipleLineData,
-        options: lineOptions
-    });
-
-
-    new Chart(ctx5, {
+    new Chart(ctx3, {
         type: 'radar',
         data: singleRadarData,
         options: radarOptions
     });
 
-    new Chart(ctx6, {
-        type: 'radar',
-        data: multipleRadarData,
-        options: radarOptions
-    });
-
-    new Chart(ctx7, {
+    new Chart(ctx4, {
         type: 'polarArea',
         data: singlePolarAreaData,
         options: polarAreaOptions
     });
 
-    new Chart(ctx8, {
-        type: 'polarArea',
-        data: multiplePolarAreaData,
-        options: polarAreaOptions
-    });
-
-    new Chart(ctx9, {
+    new Chart(ctx5, {
         type: 'pie',
         data: singlePieData,
         options: pieOptions
     });
-
-    new Chart(ctx10, {
-        type: 'pie',
-        data: multiplePieData,
-        options: pieOptions
-    });
-
-
-    new Chart(ctx11, {
-        type: 'doughnut',
-        data: singlePieData,
-        options: pieOptions
-    });
-
-    new Chart(ctx12, {
-        type: 'doughnut',
-        data: multiplePieData,
-        options: pieOptions
-    });
-
 
     function adddata() {
       aLineChart.data.datasets[0].data.push(25);
