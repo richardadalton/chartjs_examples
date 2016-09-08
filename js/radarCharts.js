@@ -1,5 +1,3 @@
-var radarOptions = extend(genericOptions, {title: {text: 'Radar Chart'}});
-
 var singleRadarData = {
     datasets: [{
         data: [
@@ -9,7 +7,7 @@ var singleRadarData = {
             3,
             14
         ],
-        label: 'My dataset' // for legend
+        label: 'My dataset'
     }],
     labels: [
         "Red",
@@ -31,8 +29,8 @@ var multipleRadarData = {
                 3,
                 14
             ],
-            borderColor: "#800000",
-            backgroundColor: "rgba(220,220,220,0.5)",
+            borderColor: "rgba(220,0,0,0.5)",
+            backgroundColor: "rgba(220,0,0,0.5)",
             label: '2015' // for legend
         },
         {
@@ -43,8 +41,8 @@ var multipleRadarData = {
                 13,
                 4
             ],
-            borderColor: "#008000",
-            backgroundColor: "rgba(220,220,220,0.5)",
+            borderColor: "rgba(0,220,220,0.5)",
+            backgroundColor: "rgba(0,220,220,0.5)",
             label: '2016' // for legend
         }],
     labels: [

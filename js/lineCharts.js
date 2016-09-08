@@ -7,7 +7,7 @@ var singleLineData = {
             3,
             14
         ],
-        backgroundColor: "rgba(220,220,220,0.5)",
+        borderColor: "rgba(220,0,0, 1)",
         label: 'My dataset' // for legend
     }],
     labels: [
@@ -30,11 +30,10 @@ var multipleLineData = {
             3,
             14
         ],
-        backgroundColor: "rgba(220,220,220,0.5)",
-        borderColor: "rgba(220,0,0,0.5)",
         label: '2015',
         lineTension: 0,
-        fill: true
+        borderColor: "rgba(220,0,0,0.5)",
+        fill: false
     },
         {
             data: [

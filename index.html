@@ -111,7 +111,7 @@
         options: createOptions('Bar Chart')
     });
 
-    var aLineChart = new Chart(ctx2, {
+    new Chart(ctx2, {
         type: 'line',
         data: singleLineData,
         options: createOptions('Line Chart')
@@ -120,19 +120,19 @@
     new Chart(ctx3, {
         type: 'radar',
         data: singleRadarData,
-        options: radarOptions
+        options: createOptions("Radar Chart")
     });
 
     new Chart(ctx4, {
         type: 'polarArea',
         data: singlePolarAreaData,
-        options: polarAreaOptions
+        options: createOptions("Polar Area Chart")
     });
 
     new Chart(ctx5, {
         type: 'pie',
         data: singlePieData,
-        options: pieOptions
+        options: createOptions("Pie Chart")
     });
 </script>
 

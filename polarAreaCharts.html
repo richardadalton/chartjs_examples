@@ -41,26 +41,16 @@
         <div class="col-md-6">
             <canvas id="chart1" width="300" height="300"></canvas>
         </div>
-        <div class="col-md-6">
-            <canvas id="chart2" width="300" height="300"></canvas>
-        </div>
     </div>
 </div>
 
 
 <script>
     var ctx1 = document.getElementById("chart1");
-    var ctx2 = document.getElementById("chart2");
 
     new Chart(ctx1, {
         type: 'polarArea',
         data: singlePolarAreaData,
-        options: polarAreaOptions
-    });
-
-    new Chart(ctx2, {
-        type: 'polarArea',
-        data: multiplePolarAreaData,
         options: polarAreaOptions
     });
 </script>

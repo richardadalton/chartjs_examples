@@ -43,7 +43,7 @@
             <p><input type="button" value="Add Data" onclick="adddata()"></p>
             <p> This simple Line Chart plots one dataset.
                 The dataset consists of an array of datapoints (data)
-                A colors for the columns(backgroundColor)
+                A color for the line(borderColor)
                 And a label for the dataset (label)</p>
             <p>Outside of the dataset the columns labels are specified.</p>
             <p>Click 'Add Data' to plot a new datapoint</p>
@@ -57,8 +57,8 @@
             3,
             14
         ],
-        backgroundColor: "rgba(220,220,220,0.5)",
-        label: 'My dataset' // for legend
+        borderColor: "rgba(220,0,0,0.25)",
+        label: 'My dataset'
     }],
     labels: [
         "Red",
@@ -75,8 +75,11 @@
             <canvas id="chart2" width="300" height="300"></canvas>
             <p> This Line Chart plots two datasets.
                 Each dataset consists of an array of datapoints (data)
-                An array of colors for the columns(backgroundColor)
-                And a label for the dataset (label)</p>
+                and a label for the dataset (label)
+                Both also have lineTension set to 0 giving straight lines between points.
+                The red dataset has fill set to false, and has a borderColor
+                The yellow data set has a backgroundColor, the line color is set based on that.</p>
+
             <p>Outside of the dataset the columns labels are specified.</p>
 <pre>
     {
@@ -88,11 +91,10 @@
             3,
             14
         ],
-        backgroundColor: "rgba(220,220,220,0.5)",
-        borderColor: "rgba(220,0,0,0.5)",
         label: '2015',
         lineTension: 0,
-        fill: true
+        borderColor: "rgba(220,0,0,0.5)",
+        fill: false
     },
         {
             data: [
