@@ -54,7 +54,7 @@ var genericData = {
             "#E7E9ED",
             "#36A2EB"
         ],
-        label: 'My dataset' // for legend
+        label: 'My dataset'
     }],
     labels: [
         "Red",
@@ -75,7 +75,7 @@ var genericMultipleBarData = {
             14
         ],
         backgroundColor: "rgba(200,200,200,0.5)",
-        label: '2015' // for legend
+        label: '2015'
     },
         {
             data: [
@@ -86,7 +86,7 @@ var genericMultipleBarData = {
                 4
             ],
             backgroundColor: "#FFCE56",
-            label: '2016' // for legend
+            label: '2016'
         }],
     labels: [
         "Red",

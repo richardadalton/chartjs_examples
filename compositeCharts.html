@@ -40,9 +40,51 @@
     <div class="row">
         <div class="col-md-6">
             <canvas id="chart1" width="300" height="300"></canvas>
-        </div>
-        <div class="col-md-6">
-            <canvas id="chart2" width="300" height="300"></canvas>
+            <p> A composite chart plots multiple datasets using different chart types.
+                This chart shows a bar chart with a line chart.
+                The type for the chart is set to 'bar' with the type of one of the datasets set to 'line'.
+<pre>
+new Chart(ctx1, {
+    <strong>type: 'bar',</strong>
+    data: compositeBarLineData,
+    options: createOptions("Composite Bar-Line Chart")
+});
+
+
+
+{
+    datasets: [{
+        <strong>type: 'line',</strong>
+        data: [
+            11,
+            16,
+            7,
+            3,
+            14
+        ],
+        borderColor: "rgba(220,0,0,0.5)",
+        label: '2015'
+    },
+        {
+            data: [
+                1,
+                6,
+                17,
+                13,
+                4
+            ],
+            backgroundColor: "#FFCE56",
+            label: '2016'
+        }],
+    labels: [
+        "Red",
+        "Green",
+        "Yellow",
+        "Grey",
+        "Blue"
+    ]
+}
+</pre>
         </div>
     </div>
 </div>

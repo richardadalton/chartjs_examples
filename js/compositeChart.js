@@ -12,7 +12,7 @@ var compositeBarLineData = {
             14
         ],
         borderColor: "rgba(220,0,0,0.5)",
-        label: '2015' // for legend
+        label: '2015'
     },
         {
             data: [
@@ -23,7 +23,7 @@ var compositeBarLineData = {
                 4
             ],
             backgroundColor: "#FFCE56",
-            label: '2016' // for legend
+            label: '2016'
         }],
     labels: [
         "Red",

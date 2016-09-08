@@ -16,7 +16,7 @@ var singlePolarAreaData = {
             "#E7E9ED",
             "#36A2EB"
         ],
-        label: 'My dataset' // for legend
+        label: 'My dataset'
     }],
     labels: [
         "Red",

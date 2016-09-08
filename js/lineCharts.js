@@ -8,7 +8,7 @@ var singleLineData = {
             14
         ],
         borderColor: "rgba(220,0,0, 1)",
-        label: 'My dataset' // for legend
+        label: 'My dataset'
     }],
     labels: [
         "Red",
